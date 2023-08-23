@@ -1,15 +1,19 @@
 import CartWidget from "../CartWidget";
+import logo from "./asset/logo.png";
 const NavBar = () => {
   return (
     <div>
       <header>
-        <h1> HC BEBIDAS </h1>
+        <div class="d-flex align-items-center justify-content-center">
+          <img src={logo} alt="img logo" class=" d-flex align-items-center" />
+          <h1> HC BEBIDAS </h1>
+        </div>
         <h3>Tu Tienda de Bebidas Preferida !! </h3>
       </header>
-      <nav class="d-flex flex-row justify-content-around ">
-        <div class="dropdown">
+      <nav class="d-flex flex-row justify-content-around m-2 p-2 ">
+        <div class="dropdown m-2 p-2">
           <button
-            class="btn btn-primary dropdown-toggle"
+            class="btn btn-primary dropdown-toggle btn-lg"
             type="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
@@ -29,9 +33,9 @@ const NavBar = () => {
             </li>
           </ul>
         </div>
-        <div class="dropdown">
+        <div class="dropdown m-2 p-2">
           <button
-            class="btn btn-secondary dropdown-toggle"
+            class="btn btn-secondary dropdown-toggle btn-lg"
             type="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
@@ -61,9 +65,9 @@ const NavBar = () => {
             </li>
           </ul>
         </div>
-        <div class="dropdown">
+        <div class="dropdown m-2 p-2">
           <button
-            class="btn btn-success dropdown-toggle"
+            class="btn btn-success dropdown-toggle btn-lg"
             type="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
@@ -78,8 +82,8 @@ const NavBar = () => {
             </li>
           </ul>
         </div>
+        <CartWidget />
       </nav>
-      <CartWidget />
     </div>
   );
 };
